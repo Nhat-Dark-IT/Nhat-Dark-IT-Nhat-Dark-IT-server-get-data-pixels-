@@ -1,0 +1,158 @@
+name: Run Puppeteer Script at Specific Times
+
+on:
+  schedule:
+    - cron: '0 0 * * *'    # 00:00
+    - cron: '15 0 * * *'   # 00:15
+    - cron: '30 0 * * *'   # 00:30
+    - cron: '45 0 * * *'   # 00:45
+    - cron: '0 1 * * *'    # 01:00
+    - cron: '15 1 * * *'   # 01:15
+    - cron: '30 1 * * *'   # 01:30
+    - cron: '45 1 * * *'   # 01:45
+    - cron: '0 2 * * *'    # 02:00
+    - cron: '15 2 * * *'   # 02:15
+    - cron: '30 2 * * *'   # 02:30
+    - cron: '45 2 * * *'   # 02:45
+    - cron: '0 3 * * *'    # 03:00
+    - cron: '15 3 * * *'   # 03:15
+    - cron: '30 3 * * *'   # 03:30
+    - cron: '45 3 * * *'   # 03:45
+    - cron: '0 4 * * *'    # 04:00
+    - cron: '15 4 * * *'   # 04:15
+    - cron: '30 4 * * *'   # 04:30
+    - cron: '45 4 * * *'   # 04:45
+    - cron: '0 5 * * *'    # 05:00
+    - cron: '15 5 * * *'   # 05:15
+    - cron: '30 5 * * *'   # 05:30
+    - cron: '45 5 * * *'   # 05:45
+    - cron: '0 6 * * *'    # 06:00
+    - cron: '15 6 * * *'   # 06:15
+    - cron: '30 6 * * *'   # 06:30
+    - cron: '45 6 * * *'   # 06:45
+    - cron: '0 7 * * *'    # 07:00
+    - cron: '15 7 * * *'   # 07:15
+    - cron: '30 7 * * *'   # 07:30
+    - cron: '45 7 * * *'   # 07:45
+    - cron: '0 8 * * *'    # 08:00
+    - cron: '15 8 * * *'   # 08:15
+    - cron: '30 8 * * *'   # 08:30
+    - cron: '45 8 * * *'   # 08:45
+    - cron: '0 9 * * *'    # 09:00
+    - cron: '15 9 * * *'   # 09:15
+    - cron: '30 9 * * *'   # 09:30
+    - cron: '45 9 * * *'   # 09:45
+    - cron: '0 10 * * *'   # 10:00
+    - cron: '15 10 * * *'  # 10:15
+    - cron: '30 10 * * *'  # 10:30
+    - cron: '45 10 * * *'  # 10:45
+    - cron: '0 11 * * *'   # 11:00
+    - cron: '15 11 * * *'  # 11:15
+    - cron: '30 11 * * *'  # 11:30
+    - cron: '45 11 * * *'  # 11:45
+    - cron: '0 12 * * *'   # 12:00
+    - cron: '15 12 * * *'  # 12:15
+    - cron: '30 12 * * *'  # 12:30
+    - cron: '45 12 * * *'  # 12:45
+    - cron: '0 13 * * *'   # 13:00
+    - cron: '15 13 * * *'  # 13:15
+    - cron: '30 13 * * *'  # 13:30
+    - cron: '45 13 * * *'  # 13:45
+    - cron: '0 14 * * *'   # 14:00
+    - cron: '15 14 * * *'  # 14:15
+    - cron: '30 14 * * *'  # 14:30
+    - cron: '45 14 * * *'  # 14:45
+    - cron: '0 15 * * *'   # 15:00
+    - cron: '15 15 * * *'  # 15:15
+    - cron: '30 15 * * *'  # 15:30
+    - cron: '45 15 * * *'  # 15:45
+    - cron: '0 16 * * *'   # 16:00
+    - cron: '15 16 * * *'  # 16:15
+    - cron: '30 16 * * *'  # 16:30
+    - cron: '45 16 * * *'  # 16:45
+    - cron: '0 17 * * *'   # 17:00
+    - cron: '15 17 * * *'  # 17:15
+    - cron: '30 17 * * *'  # 17:30
+    - cron: '45 17 * * *'  # 17:45
+    - cron: '0 18 * * *'   # 18:00
+    - cron: '15 18 * * *'  # 18:15
+    - cron: '30 18 * * *'  # 18:30
+    - cron: '45 18 * * *'  # 18:45
+    - cron: '0 19 * * *'   # 19:00
+    - cron: '15 19 * * *'  # 19:15
+    - cron: '30 19 * * *'  # 19:30
+    - cron: '45 19 * * *'  # 19:45
+    - cron: '0 20 * * *'   # 20:00
+    - cron: '15 20 * * *'  # 20:15
+    - cron: '30 20 * * *'  # 20:30
+    - cron: '45 20 * * *'  # 20:45
+    - cron: '0 21 * * *'   # 21:00
+    - cron: '15 21 * * *'  # 21:15
+    - cron: '30 21 * * *'  # 21:30
+    - cron: '45 21 * * *'  # 21:45
+    - cron: '0 22 * * *'   # 22:00
+    - cron: '15 22 * * *'  # 22:15
+    - cron: '30 22 * * *'  # 22:30
+    - cron: '45 22 * * *'  # 22:45
+    - cron: '0 23 * * *'   # 23:00
+    - cron: '15 23 * * *'  # 23:15
+    - cron: '30 23 * * *'  # 23:30   
+    - cron: '45 23 * * *'  # 23:45
+  workflow_dispatch:
+
+jobs:
+  run-puppeteer-script:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
+    timeout-minutes: 10
+    env:
+      TZ: 'Asia/Ho_Chi_Minh'
+
+    steps:
+    - name: Check current time and timezone
+      run: |
+        echo "Current date and time on the runner:"
+        date
+        echo "Timezone info:"
+        timedatectl
+
+    - name: Log scheduled time
+      run: |
+        echo "Workflow started at: $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "Next runs scheduled for:"
+        echo "- $(date -d '15 min' '+%Y-%m-%d %H:%M:%S')"
+        echo "- $(date -d '30 min' '+%Y-%m-%d %H:%M:%S')"
+        echo "- $(date -d '45 min' '+%Y-%m-%d %H:%M:%S')"
+
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        npm install puppeteer googleapis
+
+    - name: Install Chromium
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y chromium-browser
+
+    - name: Clear Puppeteer Cache
+      run: |
+        rm -rf ~/.cache/puppeteer
+
+    - name: Run Puppeteer script
+      env:
+        GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        GOOGLE_CREDENTIALS_VARIABLES: ${{ vars.GOOGLE_CREDENTIALS_JSON }}
+      run: |
+        echo "$GOOGLE_CREDENTIALS_JSON" > credentials.json
+        node index.js
