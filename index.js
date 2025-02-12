@@ -34,24 +34,29 @@ function getCurrentColumn() {
   // Lấy ngày trong tháng (1-31)
   const dayOfMonth = vnTime.getDate();
   
+  // Lấy số ngày trong tháng hiện tại
+  const lastDayOfMonth = new Date(vnTime.getFullYear(), vnTime.getMonth() + 1, 0).getDate();
+  
   // Chuyển ngày thành số cột (ngày 1 = cột B = 2)
   const columnNumber = dayOfMonth + 1; // +1 vì cột B bắt đầu từ 2
   
   console.log(`=== Debug thông tin cột ===`);
   console.log(`Ngày trong tháng: ${dayOfMonth}`);
+  console.log(`Tổng số ngày của tháng: ${lastDayOfMonth}`);
   console.log(`Tháng: ${vnTime.getMonth() + 1}`);
   console.log(`Năm: ${vnTime.getFullYear()}`);
   console.log(`Số thứ tự cột: ${columnNumber}`);
   
-  // Kiểm tra giới hạn cột (B-AF)
-  if (columnNumber < 2 || columnNumber > 32) {
-    console.error(`Cột ${columnNumber} nằm ngoài khoảng cho phép (2-32)`);
+  // Kiểm tra giới hạn cột dựa theo số ngày trong tháng
+  const maxColumn = lastDayOfMonth + 1; // +1 vì cột B bắt đầu từ 2
+  
+  if (columnNumber < 2 || columnNumber > maxColumn) {
+    console.error(`Cột ${columnNumber} nằm ngoài khoảng cho phép (2-${maxColumn})`);
     return null;
   }
   
   return getColumnLetter(columnNumber);
 }
-
 // Hàm ghi ngày tháng năm vào hàng 1
 async function writeDateHeader(sheets, column) {
   const now = new Date();
